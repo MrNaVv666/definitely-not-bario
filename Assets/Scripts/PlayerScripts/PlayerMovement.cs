@@ -37,11 +37,11 @@ public class PlayerMovement : MonoBehaviour
         {
             playerBody.velocity = new Vector2 (speed, playerBody.velocity.y);
             ChangeDirection(1);
-        }else if (h < 0)
+        } else if (h < 0)
         {
             playerBody.velocity = new Vector2(-speed, playerBody.velocity.y);
             ChangeDirection(-1);
-        }else
+        } else
         {
             playerBody.velocity= new Vector2(0, playerBody.velocity.y);
         }
