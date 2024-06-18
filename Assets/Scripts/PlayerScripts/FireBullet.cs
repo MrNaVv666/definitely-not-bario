@@ -32,7 +32,7 @@ public class FireBullet : MonoBehaviour
 
     IEnumerator disableBullet(float timer)
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(timer);
         gameObject.SetActive(false);
     }
 
