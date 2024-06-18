@@ -38,7 +38,7 @@ public class FireBullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Beetle" || collision.gameObject.tag == "Snail")
+        if (collision.gameObject.tag == Tags.SNAIL_TAG || collision.gameObject.tag == Tags.BEETLE_TAG)
         {
             animator.Play("PlayerBullet");
             StartCoroutine(disableBullet(0.7f));
