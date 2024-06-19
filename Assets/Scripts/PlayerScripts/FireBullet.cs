@@ -8,7 +8,7 @@ public class FireBullet : MonoBehaviour
     private Animator animator;
     void Awake()
     {
-    animator = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
     }
 
     private void Start()
@@ -38,10 +38,11 @@ public class FireBullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == Tags.SNAIL_TAG || collision.gameObject.tag == Tags.BEETLE_TAG)
+        if (collision.gameObject.tag == Tags.SNAIL_TAG || collision.gameObject.tag == Tags.BEETLE_TAG || collision.gameObject.tag == Tags.BIRD_TAG || collision.gameObject.tag == Tags.SPIDER_TAG)
         {
+            speed = 0;
             animator.Play("PlayerBullet");
-            StartCoroutine(disableBullet(0.7f));
+            StartCoroutine(disableBullet(0.25f));
         }
     }
 }

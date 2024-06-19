@@ -127,10 +127,10 @@ TextureImporter:
       name: bird_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 550.4
-        width: 123.5
-        height: 137.6
+        x: 5
+        y: 587
+        width: 115
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -148,10 +148,10 @@ TextureImporter:
       name: bird_1
       rect:
         serializedVersion: 2
-        x: 123
-        y: 550.4
-        width: 123.5
-        height: 137.6
+        x: 131
+        y: 551
+        width: 107
+        height: 78
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -169,10 +169,10 @@ TextureImporter:
       name: bird_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 413.4
-        width: 123.5
-        height: 137.6
+        x: 5
+        y: 448
+        width: 115
+        height: 65
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -190,10 +190,10 @@ TextureImporter:
       name: bird_3
       rect:
         serializedVersion: 2
-        x: 123
-        y: 413.4
-        width: 123.5
-        height: 137.6
+        x: 128
+        y: 449
+        width: 107
+        height: 91
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -211,10 +211,10 @@ TextureImporter:
       name: bird_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 276.4
-        width: 123.5
-        height: 137.6
+        x: 5
+        y: 290
+        width: 115
+        height: 87
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -232,10 +232,10 @@ TextureImporter:
       name: bird_5
       rect:
         serializedVersion: 2
-        x: 123
-        y: 276.4
-        width: 123.5
-        height: 137.6
+        x: 131
+        y: 279
+        width: 107
+        height: 77
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -253,10 +253,10 @@ TextureImporter:
       name: bird_6
       rect:
         serializedVersion: 2
-        x: 0
-        y: 139.4
-        width: 123.5
-        height: 137.6
+        x: 5
+        y: 153
+        width: 115
+        height: 85
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -274,10 +274,10 @@ TextureImporter:
       name: bird_7
       rect:
         serializedVersion: 2
-        x: 123
-        y: 139.4
-        width: 123.5
-        height: 137.6
+        x: 128
+        y: 153
+        width: 107
+        height: 112
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -295,10 +295,10 @@ TextureImporter:
       name: bird_8
       rect:
         serializedVersion: 2
-        x: 123
-        y: 2.399994
-        width: 123.5
-        height: 137.6
+        x: 139
+        y: 39
+        width: 81
+        height: 97
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -315,7 +315,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: b090f45c4ceed3f4dab449c492a280d9
     internalID: 0
     vertices: []
     indices: 

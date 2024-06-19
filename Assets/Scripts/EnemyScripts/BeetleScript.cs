@@ -18,8 +18,6 @@ public class BeetleScript : MonoBehaviour
         animator = GetComponent<Animator>();
         leftCollisionPosition = LeftCollision.localPosition;
         rightCollisionPosition = RightCollision.localPosition;
-        print(leftCollisionPosition);
-        print(rightCollisionPosition);
     }
     void Start()
     {
@@ -127,5 +125,15 @@ public class BeetleScript : MonoBehaviour
     {
         yield return new WaitForSeconds(timer);
         gameObject.SetActive(false);
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == Tags.BULLET_TAG)
+        {
+            animator.Play("BeetleDead");
+            canMove = false;
+            beetleBody.velocity = new Vector2(0, 0);
+            StartCoroutine(Dead(3));
+        };
     }
 }

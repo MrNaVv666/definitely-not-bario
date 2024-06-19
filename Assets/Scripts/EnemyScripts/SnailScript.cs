@@ -119,4 +119,15 @@ public class SnailScript : MonoBehaviour
         }
         transform.localScale = tempScale;
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == Tags.BULLET_TAG)
+        {
+            animator.Play("SnailDead");
+            canMove = false;
+            snailBody.velocity = new Vector2(0, 0);
+            stunned = true;
+        };
+    }
 }
