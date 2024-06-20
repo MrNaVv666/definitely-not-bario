@@ -9,7 +9,7 @@ public class SpiderScript : MonoBehaviour
 
     private Vector3 moveDirection = Vector3.down;
 
-    private string coroutineName = "ChangeMovement";
+    public float moveDistance = 0.5f;
 
     private void Awake()
     {
@@ -18,7 +18,7 @@ public class SpiderScript : MonoBehaviour
     }
     void Start()
     {
-        StartCoroutine(ChangeMovement());
+        StartCoroutine(ChangeMovement(moveDistance));
     }
 
     void Update()
@@ -30,9 +30,9 @@ public class SpiderScript : MonoBehaviour
     {
         transform.Translate(moveDirection * Time.deltaTime * 10);
     }
-    IEnumerator ChangeMovement()
+    IEnumerator ChangeMovement(float move)
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(move);
 
         if(moveDirection == Vector3.down)
         {
@@ -57,7 +57,7 @@ public class SpiderScript : MonoBehaviour
             animator.Play("SpiderDead");
             spiderBody.bodyType = RigidbodyType2D.Dynamic;
             StartCoroutine(SpiderDead());
-            StopCoroutine(coroutineName);
+            StopCoroutine(ChangeMovement());
         }
     }
 }
