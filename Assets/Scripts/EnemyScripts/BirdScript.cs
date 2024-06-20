@@ -13,7 +13,8 @@ public class BirdScripts : MonoBehaviour
     private Vector3 movePosition;
 
     public LayerMask playerLayer;
-    private bool hasStone = true;
+    
+    private bool hasStone;
     private bool canMove;
 
 
@@ -31,6 +32,7 @@ public class BirdScripts : MonoBehaviour
         movePosition.x -= 6f;
 
         canMove = true;
+        hasStone = true;
     }
 
     void Update()
