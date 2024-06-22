@@ -8,6 +8,7 @@ public class SpiderScript : MonoBehaviour
     private Rigidbody2D spiderBody;
 
     private Vector3 moveDirection = Vector3.down;
+    private Coroutine spiderMovement;
 
     public float moveDistance = 0.5f;
 
@@ -18,7 +19,7 @@ public class SpiderScript : MonoBehaviour
     }
     void Start()
     {
-        StartCoroutine(ChangeMovement(moveDistance));
+        spiderMovement = StartCoroutine(ChangeMovement(0.5f));
     }
 
     void Update()
@@ -30,9 +31,9 @@ public class SpiderScript : MonoBehaviour
     {
         transform.Translate(moveDirection * Time.deltaTime * 10);
     }
-    IEnumerator ChangeMovement(float move)
+    IEnumerator ChangeMovement(float moveDistance)
     {
-        yield return new WaitForSeconds(move);
+        yield return new WaitForSeconds(moveDistance);
 
         if(moveDirection == Vector3.down)
         {
@@ -41,7 +42,7 @@ public class SpiderScript : MonoBehaviour
         {
             moveDirection = Vector3.down;
         }
-        StartCoroutine(ChangeMovement());
+        spiderMovement = StartCoroutine(ChangeMovement(0.5f));
     }
 
     IEnumerator SpiderDead()
@@ -55,9 +56,10 @@ public class SpiderScript : MonoBehaviour
         if(collision.tag == Tags.BULLET_TAG)
         {
             animator.Play("SpiderDead");
+            moveDirection = Vector3.down;
             spiderBody.bodyType = RigidbodyType2D.Dynamic;
             StartCoroutine(SpiderDead());
-            StopCoroutine(ChangeMovement());
+            StopCoroutine(spiderMovement);
         }
     }
 }
