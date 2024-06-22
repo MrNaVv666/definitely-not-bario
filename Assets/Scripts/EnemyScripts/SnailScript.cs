@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SnailScript : MonoBehaviour
 {
-    public float speed = 2f;
+    public float speed = 5f;
     private bool moveLeft, canMove, stunned;
     private Rigidbody2D snailBody;
     private Animator animator;
