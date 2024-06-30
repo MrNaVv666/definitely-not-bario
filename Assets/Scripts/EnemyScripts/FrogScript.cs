@@ -24,14 +24,21 @@ public class FrogScript : MonoBehaviour
         frogJump = StartCoroutine(FrogJump());
     }
 
-    void Update()
+    private void LateUpdate()
     {
-        
+        if (animation_Finished == true &&  animation_Started == true)
+        {
+            animation_Started = false;
+
+            transform.parent.position = transform.position;        }
     }
 
     IEnumerator FrogJump()
     {
         yield return new WaitForSeconds(Random.Range(1f, 4f));
+
+        animation_Started = true;
+        animation_Finished = false;
 
         if (jumpLeft)
         {
@@ -43,6 +50,10 @@ public class FrogScript : MonoBehaviour
 
     void AnimationFinished()
     {
+        animation_Finished = true;
+
         animator.Play("FrogIdle");
+
+        transform.parent.position = transform.position;
     }
 }
