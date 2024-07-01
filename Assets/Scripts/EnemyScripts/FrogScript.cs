@@ -24,15 +24,6 @@ public class FrogScript : MonoBehaviour
         frogJump = StartCoroutine(FrogJump());
     }
 
-    private void LateUpdate()
-    {
-        if (animation_Finished == true &&  animation_Started == true)
-        {
-            animation_Started = false;
-
-            transform.parent.position = transform.position;        }
-    }
-
     IEnumerator FrogJump()
     {
         yield return new WaitForSeconds(Random.Range(1f, 4f));
