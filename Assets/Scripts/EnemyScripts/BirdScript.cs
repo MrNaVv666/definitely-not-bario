@@ -46,11 +46,11 @@ public class BirdScripts : MonoBehaviour
         if (canMove)
         {
             transform.Translate(moveDirection * (Time.smoothDeltaTime*3));
-            if(transform.position.x >= originPosition.x)
+            if(transform.position.x > originPosition.x)
             {
                 moveDirection = Vector3.left;
                 ChangeDirection();
-            } else if (transform.position.x <= movePosition.x)
+            } else if (transform.position.x < movePosition.x)
             {
                 moveDirection = Vector3.right;
                 ChangeDirection();
