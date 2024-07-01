@@ -9,7 +9,7 @@ public class StoneScript : MonoBehaviour
     {
         if(collision.gameObject.tag == Tags.PLAYER_TAG)
         {
-            print("A£A KURWA RZECZYWIŒCIE");
+            print("AUA KURWA RZECZYWISCIE");
         }
         gameObject.SetActive(false);
     }
