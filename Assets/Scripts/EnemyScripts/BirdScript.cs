@@ -60,9 +60,17 @@ public class BirdScripts : MonoBehaviour
 
     void ChangeDirection()
     {
-        Vector3 tempScale = transform.localScale;
-        tempScale.x *= -1;
-        transform.localScale = tempScale;
+        if(moveDirection == Vector3.right)
+        {
+            Vector3 tempScale = transform.localScale;
+            tempScale.x = -1;
+            transform.localScale = tempScale;
+        }else
+        {
+            Vector3 tempScale = transform.localScale;
+            tempScale.x = 1;
+            transform.localScale = tempScale;
+        }
     }
 
     void DropStone()
