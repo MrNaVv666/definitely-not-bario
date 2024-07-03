@@ -8,8 +8,6 @@ public class FrogScript : MonoBehaviour
     private Animator animator;
     private Coroutine frogJump;
 
-    private bool animation_Started;
-    private bool animation_Finished;
     private bool jumpLeft = true;
     private int jumpAmount;
 
@@ -28,12 +26,12 @@ public class FrogScript : MonoBehaviour
     {
         yield return new WaitForSeconds(Random.Range(1f, 4f));
 
-        animation_Started = true;
-        animation_Finished = false;
-
         if (jumpLeft)
         {
             animator.Play("FrogWalk");
+        }else
+        {
+            animator.Play("FrogWalkRight");
         }
 
         frogJump = StartCoroutine(FrogJump());
@@ -41,9 +39,26 @@ public class FrogScript : MonoBehaviour
 
     void AnimationFinished()
     {
-        animation_Finished = true;
+        jumpAmount++;
 
-        animator.Play("FrogIdle");
+        if (jumpLeft)
+        {
+            animator.Play("FrogIdle");
+        }
+        else
+        {
+            animator.Play("FrogIdleRight");
+        }
+
+        if (jumpAmount == 3)
+        {
+            jumpAmount = 0;
+            jumpLeft = !jumpLeft;
+
+            Vector3 tempScale = transform.localScale;
+            tempScale.x *= -1f;
+            transform.localScale = tempScale;
+        }
 
         transform.parent.position = transform.position;
     }
