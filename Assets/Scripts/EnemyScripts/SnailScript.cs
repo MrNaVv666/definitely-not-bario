@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class SnailScript : MonoBehaviour
 {
-    public float speed = 5f;
+    public float speed = 2f;
     private bool moveLeft, canMove, stunned;
     private Rigidbody2D snailBody;
     private Animator animator;
     public Transform downCollision, topCollision, LeftCollision, RightCollision;
     private Vector3 leftCollisionPosition, rightCollisionPosition;
-    public LayerMask playerLayer;
+    public LayerMask playerLayer, groundLayer;
 
     private void Awake()
     {
@@ -95,9 +95,10 @@ public class SnailScript : MonoBehaviour
             }
         }
 
-        if (!Physics2D.Raycast(downCollision.position, Vector2.down, 0.1f))
+        if (!Physics2D.Raycast(downCollision.position, Vector2.down, 0.1f, groundLayer))
         {
             ChangeDirection();
+            print("NI MA");
         }
     }
     void ChangeDirection()
