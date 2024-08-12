@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1156193743454028198}
   - component: {fileID: 8032648198770964152}
   - component: {fileID: 7406982898858703240}
+  - component: {fileID: 6407003863319436652}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -79,7 +80,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -6139101542287094464, guid: 50758d46925d6294a9c545bc1626826f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -212,3 +213,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireBullet: {fileID: 9052284336892851433, guid: a934ab1101c26ea468c0060204be0fd1, type: 3}
+--- !u!114 &6407003863319436652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4665967520145284726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b264a9d33e9a4b84fa9f64083e27b7ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

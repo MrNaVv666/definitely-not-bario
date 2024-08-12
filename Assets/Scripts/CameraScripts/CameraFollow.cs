@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraFollow : MonoBehaviour
 {
     public float resetSpeed = 0.5f;
-    public float cameraSpeed = 0.3f;
+    public float cameraSpeed = 3f;
 
     public Bounds cameraBounds;
 
