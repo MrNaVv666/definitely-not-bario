@@ -58,7 +58,7 @@ public class SnailScript : MonoBehaviour
                 if(!stunned)
                 {
                     stunned = true;
-                    topHit.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(topHit.gameObject.GetComponent<Rigidbody2D>().velocity.x, 12f);
+                    topHit.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(topHit.gameObject.GetComponent<Rigidbody2D>().velocity.x, 8f);
                     canMove = false;
                     snailBody.velocity = new Vector2(0, 0);
                     animator.Play("SnailDead");
@@ -72,7 +72,7 @@ public class SnailScript : MonoBehaviour
             {
                 if (!stunned)
                 {
-                    print("A MASZ");
+                    leftHit.collider.gameObject.GetComponent<PlayerDamage>().DealDamage();
                 } else
                 {
                     snailBody.velocity = new Vector2(50, snailBody.velocity.y);
@@ -86,7 +86,7 @@ public class SnailScript : MonoBehaviour
             {
                 if (!stunned)
                 {
-                    print("A MASZ");
+                    rightHit.collider.gameObject.GetComponent<PlayerDamage>().DealDamage();
                 }
                 else
                 {
@@ -98,7 +98,6 @@ public class SnailScript : MonoBehaviour
         if (!Physics2D.Raycast(downCollision.position, Vector2.down, 0.1f, groundLayer))
         {
             ChangeDirection();
-            print("NI MA");
         }
     }
     void ChangeDirection()

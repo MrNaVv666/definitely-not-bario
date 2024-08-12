@@ -56,7 +56,6 @@ public class BeetleScript : MonoBehaviour
                 if (!stunned)
                 {
                     stunned = true;
-                    topHit.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(topHit.gameObject.GetComponent<Rigidbody2D>().velocity.x, 12f);
                     topHit.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(topHit.gameObject.GetComponent<Rigidbody2D>().velocity.y, 8f);
                     canMove = false;
                     beetleBody.velocity = new Vector2(0, 0);

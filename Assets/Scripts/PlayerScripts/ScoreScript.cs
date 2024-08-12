@@ -17,7 +17,6 @@ public class ScoreScript : MonoBehaviour
     void Start()
     {
         coinTextScore = GameObject.Find("CoinText").GetComponent<TMP_Text>();
-
     }
 
     void Update()

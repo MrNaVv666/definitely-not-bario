@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 1286546054619286970}
   - component: {fileID: 6192770688000025037}
   - component: {fileID: 1006930656727491712}
-  - component: {fileID: 3980484960715810264}
+  - component: {fileID: 7774022939246464320}
   m_Layer: 0
   m_Name: Snail
   m_TagString: Snail
@@ -220,7 +220,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &3980484960715810264
+--- !u!114 &7774022939246464320
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -240,6 +240,9 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 8
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &1768366048412553375
 GameObject:
   m_ObjectHideFlags: 0
