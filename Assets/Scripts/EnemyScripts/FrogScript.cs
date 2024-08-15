@@ -11,6 +11,9 @@ public class FrogScript : MonoBehaviour
     private bool jumpLeft = true;
     private int jumpAmount;
 
+    public LayerMask playerLayer;
+
+    private GameObject player;
 
     private void Awake()
     {
@@ -20,6 +23,15 @@ public class FrogScript : MonoBehaviour
     void Start()
     {
         frogJump = StartCoroutine(FrogJump());
+        player = GameObject.FindGameObjectWithTag(Tags.PLAYER_TAG);
+    }
+
+    private void Update()
+    {
+        if (Physics2D.OverlapCircle(transform.position, 0.5f, playerLayer))
+        {
+            player.GetComponent<PlayerDamage>().DealDamage();
+        }
     }
 
     IEnumerator FrogJump()

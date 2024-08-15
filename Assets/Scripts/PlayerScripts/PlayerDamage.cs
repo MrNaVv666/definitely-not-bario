@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerDamage : MonoBehaviour
 {
@@ -37,6 +38,8 @@ public class PlayerDamage : MonoBehaviour
             if (lifeScoreCount == 0)
             {
                 print("You died");
+                Time.timeScale = 0f;
+                StartCoroutine(RestartScene());
             }
 
             canDamage = false;
@@ -49,5 +52,12 @@ public class PlayerDamage : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
         canDamage = true;
+    }
+
+    IEnumerator RestartScene()
+    {
+        yield return new WaitForSecondsRealtime(1f);
+        SceneManager.LoadScene("Chapter_1");
+        Time.timeScale = 1f;
     }
 }
