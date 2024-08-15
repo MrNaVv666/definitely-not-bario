@@ -34,4 +34,11 @@ public class ScoreScript : MonoBehaviour
             audioManager.Play();
         }
     }
+
+    public void BonusBlock()
+    {
+        scoreCount++;
+        coinTextScore.text = 'x' + scoreCount.ToString();
+        audioManager.Play();
+    }
 }
