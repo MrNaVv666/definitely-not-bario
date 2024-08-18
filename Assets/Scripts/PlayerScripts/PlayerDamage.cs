@@ -42,6 +42,8 @@ public class PlayerDamage : MonoBehaviour
                 StartCoroutine(RestartScene());
             }
 
+            GameObject.Find("HitSound").GetComponent<AudioSource>().Play();
+
             canDamage = false;
 
             StartCoroutine(WaitForDamage());
