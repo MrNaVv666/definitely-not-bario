@@ -6,7 +6,7 @@ public class Boss1Health : MonoBehaviour
 {
     private Animator animator;
     
-    private int health = 5;
+    private int health = 50;
     void Awake()
     {
         animator = GetComponent<Animator>();
