@@ -38,7 +38,7 @@ public class FireBullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == Tags.SNAIL_TAG || collision.gameObject.tag == Tags.BEETLE_TAG || collision.gameObject.tag == Tags.BIRD_TAG || collision.gameObject.tag == Tags.SPIDER_TAG)
+        if (collision.gameObject.tag == Tags.SNAIL_TAG || collision.gameObject.tag == Tags.BEETLE_TAG || collision.gameObject.tag == Tags.BIRD_TAG || collision.gameObject.tag == Tags.SPIDER_TAG || collision.gameObject.tag == Tags.BOSS_TAG)
         {
             speed = 0;
             animator.Play("PlayerBullet");

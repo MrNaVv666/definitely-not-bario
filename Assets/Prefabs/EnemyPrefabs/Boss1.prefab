@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 7492347331971135448}
   - component: {fileID: 5536607164196426997}
   - component: {fileID: 347510739419147928}
+  - component: {fileID: 5015572105443931941}
   m_Layer: 0
   m_Name: Boss1
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -185,7 +186,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &347510739419147928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -200,6 +201,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stone: {fileID: 4384352424135072042, guid: dde522e994e682a41a9c4baa6b1fe85b, type: 3}
   attackInstantiate: {fileID: 2263743937552011397}
+--- !u!114 &5015572105443931941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2986924996439433652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ef2a440fcf2a1e4db93ddffbd576920, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4708472578429261374
 GameObject:
   m_ObjectHideFlags: 0

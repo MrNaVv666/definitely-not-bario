@@ -11,4 +11,5 @@ public class Tags : MonoBehaviour
     public static string SPIDER_TAG = "Spider";
     public static string BIRD_TAG = "Bird";
     public static string COIN_TAG = "Coin";
+    public static string BOSS_TAG = "Boss";
 }

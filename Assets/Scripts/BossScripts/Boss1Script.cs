@@ -18,11 +18,6 @@ public class Boss1Script : MonoBehaviour
         StartCoroutine(coroutinge_name);
     }
 
-    void Update()
-    {
-        
-    }
-
     void Attack()
     {
         GameObject obj = Instantiate(stone, attackInstantiate.position, Quaternion.identity);
