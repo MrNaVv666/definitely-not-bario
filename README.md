@@ -2,7 +2,7 @@
 My first ever game in Unity, it's a basic 2D platformer. Here's where everything began.
 
 Controls:
-A - Move Left
+A - Move Left 
 D - Move Right 
 Space - Jump
 Shift - Shoot Bullet
