@@ -21,7 +21,7 @@ public class Boss1Script : MonoBehaviour
     void Attack()
     {
         GameObject obj = Instantiate(stone, attackInstantiate.position, Quaternion.identity);
-        obj.GetComponent<Rigidbody2D>().AddForce(new Vector2(Random.Range(-250f, -600f), 0f));
+        obj.GetComponent<Rigidbody2D>().AddForce(new Vector2(Random.Range(-150f, -600f), 0f));
     }
 
     void BackToIdle()

@@ -13,7 +13,7 @@ public class FireBullet : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(disableBullet(5f));
+        StartCoroutine(disableBullet(1.5f));
     }
 
     void Update()

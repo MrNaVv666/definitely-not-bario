@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Boss1Health : MonoBehaviour
 {
@@ -25,6 +26,8 @@ public class Boss1Health : MonoBehaviour
             if (health <= 0)
             {
                 animator.Play("BossDead");
+                GameObject.Find("LevelClearSound").GetComponent<AudioSource>().Play();
+                GameObject.Find("LevelClearSound").GetComponent<LevelClearScript>().MainMenuF();
             }
         }
     }

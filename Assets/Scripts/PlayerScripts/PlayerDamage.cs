@@ -50,6 +50,11 @@ public class PlayerDamage : MonoBehaviour
         }
     }
 
+    public void RestartSceneFunction()
+    {
+        StartCoroutine(RestartScene());
+    }
+
     IEnumerator WaitForDamage()
     {
         yield return new WaitForSeconds(2f);
